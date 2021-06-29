@@ -15,7 +15,7 @@ else(NOT MSCV)
     set(CMAKE_CXX_STANDARD 17)
 endif(MSVC)
 
-find_package(Eigen3 CONFIG REQUIRED)
+#find_package(Eigen3 CONFIG REQUIRED)
 
 file(GLOB_RECURSE HEADER_FILES include/*.h)
 file(GLOB_RECURSE SRC_FILES src/*.cpp)
@@ -31,5 +31,5 @@ target_include_directories( ${PROJECT_NAME}
 )
 
 target_link_libraries( ${PROJECT_NAME}
-    PRIVATE Eigen3::Eigen
+    PRIVATE echo::linearalgebra
 )
